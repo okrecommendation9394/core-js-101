@@ -18,8 +18,14 @@
  *   'aa',''    => 'aa'
  *   '',  'bb'  => 'bb'
  */
-function concatenateStrings(/* value1, value2 */) {
-  throw new Error('Not implemented');
+function concatenateStrings(value1, value2 ) {
+  if(value1==false){
+    return value2;
+  }else if(value2==false){
+    return value1;
+  }else{
+    return value1+value2;
+  }
 }
 
 
