@@ -235,12 +235,7 @@ function toArrayOfSquares(arr) {
  *   [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] => [ 1, 3, 6, 10, 15, 21, 28, 36, 45, 55 ]
  */
 function getMovingSum(arr) {
-  let sum = arr[0];
-  for (let i = 1; i < arr.length; i += 1) {
-    sum += arr[i];
-    arr.splice(i, 1, sum);
-  }
-  return arr;
+  return arr.reduce((a, b, i) => (i === 0 ? [b] : [...a, b + a[i - 1]]), []);
 }
 
 /**
