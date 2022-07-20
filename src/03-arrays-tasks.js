@@ -35,12 +35,8 @@ function findElement(arr, value) {
  *    2 => [ 1, 3 ]
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
-function generateOdds(len) {
-  const arr = [];
-  for (let i = 0; i <= len * 2; i += 1) {
-    arr.push(i);
-  }
-  return arr.filter((n) => n % 2);
+function generateOdds(/* len */) {
+  throw new Error('Not implemented');
 }
 
 
@@ -72,8 +68,8 @@ function doubleArray(/* arr */) {
  *    [-1, 2, -5, -4, 0] => [ 2 ]
  *    [] => []
  */
-function getArrayOfPositives(/* arr */) {
-  throw new Error('Not implemented');
+function getArrayOfPositives(arr) {
+  return arr.filter((x) => x > 0);
 }
 
 /**
