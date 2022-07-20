@@ -295,7 +295,7 @@ function propagateItemsByPositionIndex(arr) {
  */
 function get3TopItems(arr) {
   arr.sort((a, b) => b - a);
-  return arr.splice(arr.length - 3);
+  return arr.splice(0, 3);
 }
 
 
