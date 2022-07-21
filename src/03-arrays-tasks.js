@@ -509,14 +509,8 @@ function getIntervalArray(start, end) {
  *   [ 1, 1, 2, 2, 3, 3, 4, 4] => [ 1, 2, 3, 4]
  */
 function distinct(arr) {
-  for (let i = 0; i < arr.length; i += 1) {
-    for (let j = 1; j < arr.length; j += 1) {
-      if (arr[i] === arr[j]) {
-        arr.splice(i, 1);
-      }
-    }
-  }
-  return arr;
+  const unique = [...new Set(arr)];
+  return unique;
 }
 
 /**
