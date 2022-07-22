@@ -101,6 +101,7 @@ function timeSpanToString(startDate, endDate) {
  *    Date.UTC(2016,3,5,18, 0) => Math.PI
  *    Date.UTC(2016,3,5,21, 0) => Math.PI/2
  */
+// shecdoma
 function angleBetweenClockHands(date) {
   let hours = date.getHours();
   if (hours > 11) {
