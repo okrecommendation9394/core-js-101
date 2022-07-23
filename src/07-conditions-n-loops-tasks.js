@@ -390,7 +390,7 @@ function isBracketsBalanced(str) {
       return false;
     }
   }
-  return true;
+  return stack.length === 0;
 }
 
 
