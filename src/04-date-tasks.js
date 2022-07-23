@@ -109,13 +109,12 @@ function angleBetweenClockHands(date) {
     hours -= 12;
   }
   const minutes = dates.getUTCMinutes();
-  let hoursDegree = 30 * hours;
-  if (hoursDegree > 180) {
-    hoursDegree = 360 - hoursDegree;
-  }
   const minutesDegree = 6 * minutes;
-  const degree = hoursDegree > minutesDegree ? hoursDegree - minutesDegree
-    : minutesDegree - hoursDegree;
+  const hoursDegree = (30 * hours) + (0.5 * minutes);
+
+  let degree = Math.abs(hoursDegree - minutesDegree);
+  degree = Math.min(360 - degree, degree);
+
   return (degree * Math.PI) / 180;
 }
 
