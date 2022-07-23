@@ -231,22 +231,30 @@ function findFirstSingleChar(str) {
  *
  */
 function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
-  let start;
-  let end;
+  let first;
+  let second;
+  let open;
+  let close;
+  if (a < b) {
+    first = a;
+    second = b;
+  } else {
+    first = b;
+    second = a;
+  }
+
   if (isStartIncluded === true) {
-    start = '[';
+    open = '[';
   } else {
-    start = '(';
+    open = '(';
   }
+
   if (isEndIncluded === true) {
-    end = ']';
+    close = ']';
   } else {
-    end = ')';
+    close = ')';
   }
-  if (a > b) {
-    return `${start + a.toString()},${b.toString()}${end}`;
-  }
-  return `${start + b.toString()},${a.toString()}${end}`;
+  return `${open + first}, ${second + close}`;
 }
 
 
