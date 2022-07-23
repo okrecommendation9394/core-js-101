@@ -176,6 +176,7 @@ function doRectanglesOverlap(rect1, rect2) {
  *   { center: { x:0, y:0 }, radius:10 },  { x:10, y:10 }   => false
  *
  */
+// shecdoma
 function isInsideCircle(circle, point) {
   const distance = Math.sqrt((circle.center.x - point.x) * 2 + (circle.center.y - point.y) * 2);
   if (distance < circle.radius) {
@@ -229,8 +230,23 @@ function findFirstSingleChar(str) {
  *   5, 3, true, true   => '[3, 5]'
  *
  */
-function getIntervalString(/* a, b, isStartIncluded, isEndIncluded */) {
-  throw new Error('Not implemented');
+function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
+  let start;
+  let end;
+  if (isStartIncluded === true) {
+    start = '[';
+  } else {
+    start = '(';
+  }
+  if (isEndIncluded === true) {
+    end = ']';
+  } else {
+    end = ')';
+  }
+  if (a > b) {
+    return `${start + a.toString()},${b.toString()}${end}`;
+  }
+  return `${start + b.toString()},${a.toString()}${end}`;
 }
 
 
