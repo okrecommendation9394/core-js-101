@@ -196,14 +196,15 @@ function isInsideCircle(circle, point) {
  *   'abracadabra'  => 'c'
  *   'entente' => null
  */
-function findFirstSingleChar(str) {
-  const arr = str.split('').sort().filter((a) => a !== ' ');
+function findFirstSingleChar(/* str */) {
+  /* const arr = str.split('').sort().filter((a) => a !== ' ');
   for (let i = 0; i < arr.length; i += 1) {
     if (arr[i] !== arr[i + 1] && arr[i] !== arr[i - 1]) {
       return arr[i];
     }
   }
-  return null;
+  return null; */
+  throw new Error('Not implemented');
 }
 
 
