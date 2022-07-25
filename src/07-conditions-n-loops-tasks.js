@@ -514,7 +514,7 @@ function getMatrixProduct(m1, m2) {
  *
  */
 function evaluateTicTacToePosition(position) {
-  for (let i = 0; i < position.length; i += 1) {
+  for (let i = 0; i < 2; i += 1) {
     if (position[i][0] === position[i][1] && position[i][0] === position[i][2]) {
       return position[i][0];
     } if (position[i][0] === position[i + 1][1] && position[i][0] === position[i + 2][2]) {

@@ -67,15 +67,7 @@ function getPowerFunction(exponent) {
  *   getPolynom()      => null
  */
 function getPolynom() {
-  return function calc(a1, a2) {
-    const result = [];
-    a1.forEach((a, i) => {
-      a2.forEach((b, j) => {
-        result[i + j] = (result[i + j] || 0) + a * b;
-      });
-    });
-    return result;
-  };
+  throw new Error('Not implemented');
 }
 
 
