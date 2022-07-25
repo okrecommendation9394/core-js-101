@@ -120,7 +120,6 @@ function retry(func, attempts) {
     if (attempts > 0) {
       retry(func, attempts - 1);
     }
-    throw error;
   }
   return () => func();
 }
