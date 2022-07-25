@@ -72,7 +72,7 @@ function getPolynom(...args) {
   } if (args.length === 2) {
     return (x) => (args[0] * x + args[1]);
   } if (args.length === 1) {
-    return args[0];
+    return () => args[0];
   }
   return null;
 }
