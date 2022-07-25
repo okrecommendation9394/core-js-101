@@ -122,7 +122,7 @@ function retry(func, attempts) {
     }
     throw error;
   }
-  return func();
+  return () => func();
 }
 
 
